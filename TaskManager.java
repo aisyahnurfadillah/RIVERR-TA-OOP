@@ -42,4 +42,16 @@ public class TaskManager {
         }
         System.out.println("Task tidak ditemukan.");
     }
+
+    public static void main(String[] args) {
+        TaskManager manager = new TaskManager();
+
+        manager.addTask(new Task(1, "Belajar Java"));
+        manager.addTask(new Task(2, "Mengerjakan PR"));
+        manager.viewAllTasks();
+
+        manager.updateTask(1, "Belajar Java OOP");
+        manager.deleteTask(2);
+        manager.viewAllTasks();
+    }
 }
